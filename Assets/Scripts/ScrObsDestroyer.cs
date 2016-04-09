@@ -2,11 +2,10 @@
 using System.Collections;
 
 public class ScrObsDestroyer : MonoBehaviour {
-
-	public GameObject sc;
+	public ScrGameVars scrGameVars;
 
 	private void OnTriggerEnter2D(Collider2D other) {
 		Destroy (other.gameObject);
-		Debug.Log ("Destroyed");
+		scrGameVars.setHealth (-1);
 	}
 }

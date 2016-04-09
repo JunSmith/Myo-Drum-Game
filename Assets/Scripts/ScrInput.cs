@@ -7,6 +7,8 @@ using VibrationType = Thalmic.Myo.VibrationType;
 
 public class ScrInput : MonoBehaviour {
 	public GameObject myo = null;
+	public ScrGameVars vars;
+	public ScrSpawner spawner;
 	private Quaternion antiYaw = Quaternion.identity;
 	private float referenceRoll = 0.0f;
 	private Pose pose = Pose.Unknown;
@@ -22,18 +24,22 @@ public class ScrInput : MonoBehaviour {
 	}
 
 	private void Update() {
-		if (Input.GetKey (KeyCode.W)) {
-			pose = Pose.Fist;
-			Debug.Log (pose.ToString ());
-		} else if (Input.GetKey (KeyCode.S)) {
-			pose = Pose.FingersSpread;
-			Debug.Log (pose.ToString ());
-		} else if (Input.GetKey (KeyCode.A)) {
-			pose = Pose.WaveIn;
-			Debug.Log (pose.ToString ());
-		} else if (Input.GetKey (KeyCode.D)) {
-			pose = Pose.WaveOut;
-			Debug.Log (pose.ToString ());
+		if (Input.GetKeyDown (KeyCode.W)) {
+//			pose = Pose.Fist;
+//			Debug.Log (pose.ToString ());
+			spawner.DestroyObstacle(0);
+		} else if (Input.GetKeyDown (KeyCode.S)) {
+//			pose = Pose.FingersSpread;
+//			Debug.Log (pose.ToString ());
+			spawner.DestroyObstacle(1);
+		} else if (Input.GetKeyDown (KeyCode.A)) {
+//			pose = Pose.WaveIn;
+//			Debug.Log (pose.ToString ());
+			spawner.DestroyObstacle(2);
+		} else if (Input.GetKeyDown (KeyCode.D)) {
+//			pose = Pose.WaveOut;
+//			Debug.Log (pose.ToString ());
+			spawner.DestroyObstacle(3);
 		} else {
 			pose = Pose.Unknown;
 		}
