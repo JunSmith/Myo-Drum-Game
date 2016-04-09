@@ -1,12 +1,13 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ScrSpawner.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ScrGameVars.cs">
     <Files>
-      <File FileName="Assets\Scripts\ScrInput.cs" Line="39" Column="4" />
-      <File FileName="Assets\Scripts\ScrSpawner.cs" Line="66" Column="54" />
-      <File FileName="Assets\Scripts\ScrObstacle.cs" Line="10" Column="28" />
-      <File FileName="Assets\Scripts\ScrMenu.cs" Line="16" Column="1" />
-      <File FileName="Assets\Scripts\ScrObsDestroyer.cs" Line="12" Column="1" />
+      <File FileName="Assets\Scripts\ScrObsDestroyer.cs" Line="8" Column="24" />
+      <File FileName="Assets\Scripts\ScrInput.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ScrSpawner.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ScrObstacle.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ScrMenu.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ScrGameVars.cs" Line="8" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
