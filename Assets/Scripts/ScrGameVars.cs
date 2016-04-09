@@ -2,6 +2,29 @@
 using System.Collections;
 
 public class ScrGameVars : MonoBehaviour {
-	public int health { get; set; }
-	public int score { get; set; }
+	private int health;
+	private int score;
+
+	private void Start() {
+		health = 100;
+		score = 0;
+	}
+
+	public void setHealth(int change) {
+		health += change;
+		Debug.Log (health);
+	}
+
+	public int getHealth() {
+		return health;
+	}
+
+	public void SetScore(int change) {
+		score += change;
+		Debug.Log (score);
+	}
+
+	public int getScore() {
+		return score;
+	}
 }

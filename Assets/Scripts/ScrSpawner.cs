@@ -21,6 +21,13 @@ public class ScrSpawner : MonoBehaviour {
 		yield return StartCoroutine("Spawn"); 
 	}
 
+//	private void Update() {
+//		if (Input.GetKey (KeyCode.A) && obsQueue0.Count > 0) {
+//			Object curObs = obsQueue0.Dequeue ();
+//			Destroy (curObs);
+//		}
+//	}
+
 	IEnumerator Spawn() {
 		int row;
 
@@ -69,8 +76,43 @@ public class ScrSpawner : MonoBehaviour {
 		}
 	}
 
-	public void DestroyObstacle(int index) {
+	public bool DestroyObstacle(int index) {
+		Object curObs;
+
+		switch (index) {
+		case 0:
+			if (obsQueue0.Count > 0) {
+				curObs = obsQueue0.Dequeue ();
+				Destroy (curObs);
+				return true;
+			}
+			break;
+		case 1:
+			if (obsQueue1.Count > 0) {
+				curObs = obsQueue1.Dequeue ();
+				Destroy (curObs);
+				return true;
+			}
+			break;
+		case 2:
+			if (obsQueue2.Count > 0) {
+				curObs = obsQueue2.Dequeue ();
+				Destroy (curObs);
+				return true;
+			}
+			break;
+		case 3:
+			if (obsQueue3.Count > 0) {
+				curObs = obsQueue3.Dequeue ();
+				Destroy (curObs);
+				return true;
+			}
+			break;
+		default:
+			break;
+		}
 		// Call after obstacle touches collision mesh at far right of screen
 		// Remove the current first entry of the relevant list (maybe make it a queue)
+		return false;
 	}
 }
