@@ -12,6 +12,7 @@ public class ScrGameVars : MonoBehaviour {
 
 	public void setHealth(int change) {
 		health += change;
+		Debug.Log (health);
 	}
 
 	public int getHealth() {
@@ -20,6 +21,7 @@ public class ScrGameVars : MonoBehaviour {
 
 	public void SetScore(int change) {
 		score += change;
+		Debug.Log (score);
 	}
 
 	public int getScore() {

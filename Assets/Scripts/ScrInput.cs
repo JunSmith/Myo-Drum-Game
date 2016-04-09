@@ -24,25 +24,27 @@ public class ScrInput : MonoBehaviour {
 	}
 
 	private void Update() {
+		int obsDest;
+
 		if (Input.GetKeyDown (KeyCode.W)) {
-//			pose = Pose.Fist;
-//			Debug.Log (pose.ToString ());
-			spawner.DestroyObstacle(0);
+			destroy(0);
 		} else if (Input.GetKeyDown (KeyCode.S)) {
-//			pose = Pose.FingersSpread;
-//			Debug.Log (pose.ToString ());
-			spawner.DestroyObstacle(1);
+			destroy(1);
 		} else if (Input.GetKeyDown (KeyCode.A)) {
-//			pose = Pose.WaveIn;
-//			Debug.Log (pose.ToString ());
-			spawner.DestroyObstacle(2);
+			destroy(2);
 		} else if (Input.GetKeyDown (KeyCode.D)) {
-//			pose = Pose.WaveOut;
-//			Debug.Log (pose.ToString ());
-			spawner.DestroyObstacle(3);
-		} else {
-			pose = Pose.Unknown;
+			destroy(3);
 		}
+	}
+
+	private void destroy(int index) {
+		if (spawner.DestroyObstacle (index))
+			vars.SetScore (10);
 	}
 }
 
+//pose = Pose.WaveIn; 
+//pose = Pose.DoubleTap;
+//pose = Pose.Fist;
+//pose = Pose.FingersSpread;
+//pose = Pose.Unknown;
