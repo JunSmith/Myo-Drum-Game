@@ -82,7 +82,7 @@ public class ScrSpawner : MonoBehaviour {
  
   
 
-            if (counter == 5 && spawnSpeed != 0)
+            if (counter == 5 && spawnSpeed != 2)
             {
                 spawnSpeed -= 2;
                 audio.pitch += 0.2f;
