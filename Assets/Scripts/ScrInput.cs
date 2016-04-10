@@ -9,6 +9,8 @@ public class ScrInput : MonoBehaviour {
 	public GameObject myo = null;
 	public ScrGameVars vars;
 	public ScrSpawner spawner;
+	public ScrTriggers triggers;
+
 	private Quaternion antiYaw = Quaternion.identity;
 	private float referenceRoll = 0.0f;
 	private Pose pose = Pose.Unknown;
@@ -27,13 +29,17 @@ public class ScrInput : MonoBehaviour {
 		int obsDest;
 
 		if (Input.GetKeyDown (KeyCode.W)) {
-			destroy(0);
+//			destroy(0);
+			triggers.enable(0);
 		} else if (Input.GetKeyDown (KeyCode.S)) {
-			destroy(1);
+//			destroy(1);
+			triggers.enable(1);
 		} else if (Input.GetKeyDown (KeyCode.A)) {
-			destroy(2);
+//			destroy(2);
+			triggers.enable(2);
 		} else if (Input.GetKeyDown (KeyCode.D)) {
-			destroy(3);
+//			destroy(3);
+			triggers.enable(3);
 		}
 	}
 
