@@ -12,4 +12,8 @@ public class ScrMenu : MonoBehaviour {
 	public void BtnPlay_click() {
 		SceneManager.LoadScene (1);
 	}
+    public void BtnMenu_click()
+    {
+        SceneManager.LoadScene(0);
+    }
 }
