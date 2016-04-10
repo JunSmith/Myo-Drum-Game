@@ -4,16 +4,22 @@ using System.Collections.Generic;
 
 public class ScrSpawner : MonoBehaviour {
 	public GameObject obstacle;
-	private float[] spawnInterval = { 0.25f, 2f };
+
+    private new AudioSource audio;
+
+    private float[] spawnInterval = { 0.25f, 2f };
 	private float[] ySpawnPts = { 4.15f, 2.15f, -0.6f, -2.75f};
 
 	private Queue<Object> obsQueue0;
 	private Queue<Object> obsQueue1;
 	private Queue<Object> obsQueue2;
 	private Queue<Object> obsQueue3;
+    private int counter = 0;
+    private float spawnSpeed = 12;
 
-	private IEnumerator Start () {
-
+	private IEnumerator Start ()
+    {
+        audio = GetComponent<AudioSource>();
 		obsQueue0 = new Queue<Object> ();
 		obsQueue1 = new Queue<Object> ();
 		obsQueue2 = new Queue<Object> ();
@@ -30,9 +36,12 @@ public class ScrSpawner : MonoBehaviour {
 
 	IEnumerator Spawn() {
 		int row;
-
-		while (true) {
-			row = Random.Range (0, 4);
+        
+        while (true)
+        {
+            counter++;
+            Debug.Log(spawnSpeed + " " + audio.pitch + " " + counter);
+            row = Random.Range (0, 4);
 
 			switch (row) {
 			case 0:
@@ -70,15 +79,25 @@ public class ScrSpawner : MonoBehaviour {
 				break;
 			}
 
+ 
+  
+
+            if (counter == 5 && spawnSpeed != 0)
+            {
+                spawnSpeed -= 2;
+                audio.pitch += 0.2f;
+                counter = -1;
+            }
             // Try to implement single array of 4 queues later
             //Divisible by two = will keep syned with audio
-            yield return new WaitForSeconds(2);//Random.Range (spawnInterval [0], spawnInterval [4]));
-		}
+            yield return new WaitForSeconds(spawnSpeed);//Random.Range (spawnInterval [0], spawnInterval [4]));
+
+        }
 	}
 
-	public bool DestroyObstacle(int index) {
+	public bool DestroyObstacle(int index)
+    {
 		Object curObs;
-
 		switch (index) {
 		case 0:
 			if (obsQueue0.Count > 0) {
