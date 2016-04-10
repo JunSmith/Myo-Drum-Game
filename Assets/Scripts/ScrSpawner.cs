@@ -70,9 +70,9 @@ public class ScrSpawner : MonoBehaviour {
 				break;
 			}
 
-			// Try to implement single array of 4 queues later
+            // Try to implement single array of 4 queues later
 
-			yield return new WaitForSeconds (Random.Range (spawnInterval [0], spawnInterval [1]));
+            yield return new WaitForSeconds(4);//Random.Range (spawnInterval [0], spawnInterval [4]));
 		}
 	}
 
