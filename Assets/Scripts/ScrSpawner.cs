@@ -71,8 +71,8 @@ public class ScrSpawner : MonoBehaviour {
 			}
 
             // Try to implement single array of 4 queues later
-
-            yield return new WaitForSeconds(4);//Random.Range (spawnInterval [0], spawnInterval [4]));
+            //Divisible by two = will keep syned with audio
+            yield return new WaitForSeconds(2);//Random.Range (spawnInterval [0], spawnInterval [4]));
 		}
 	}
 
