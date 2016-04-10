@@ -6,7 +6,7 @@ public class ScrGameVars : MonoBehaviour {
 	private int score;
 
 	private void Start() {
-		health = 100;
+		health = 3;
 		score = 0;
 	}
 

@@ -27,13 +27,6 @@ public class ScrSpawner : MonoBehaviour {
 		yield return StartCoroutine("Spawn"); 
 	}
 
-//	private void Update() {
-//		if (Input.GetKey (KeyCode.A) && obsQueue0.Count > 0) {
-//			Object curObs = obsQueue0.Dequeue ();
-//			Destroy (curObs);
-//		}
-//	}
-
 	IEnumerator Spawn() {
 		int row;
         

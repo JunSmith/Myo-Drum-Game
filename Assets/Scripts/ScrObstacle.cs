@@ -8,7 +8,7 @@ public class ScrObstacle : MonoBehaviour {
 
 	void Start () {
 		target = new Vector2 (13f, this.transform.position.y);
-		speed = 2f;
+		speed = 4f;
 	}
 
 	void Update () {
