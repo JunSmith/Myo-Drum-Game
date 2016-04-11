@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEngine.SceneManagement;
+//using UnityEngine.SceneManagement;
 
 public class ScrObsDestroyer : MonoBehaviour {
 	public ScrGameVars scrGameVars;
@@ -9,9 +9,9 @@ public class ScrObsDestroyer : MonoBehaviour {
 		Destroy (other.gameObject);
 		scrGameVars.setHealth (-1);
 
-        if(scrGameVars.getHealth() <= 0)
-        {
-            SceneManager.LoadScene(2);
-        }
+		if(scrGameVars.getHealth() <= 0) {
+			//SceneManager.LoadScene(2);
+			Application.LoadLevel (2);
+		}
 	}
 }

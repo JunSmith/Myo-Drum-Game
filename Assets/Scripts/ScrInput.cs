@@ -6,13 +6,11 @@ using UnlockType = Thalmic.Myo.UnlockType;
 using VibrationType = Thalmic.Myo.VibrationType;
 
 public class ScrInput : MonoBehaviour {
-	public GameObject myo = null;
+	public GameObject myo;
 	public ScrGameVars vars;
 	public ScrSpawner spawner;
 	public ScrTriggers triggers;
 
-	private Quaternion antiYaw = Quaternion.identity;
-	private float referenceRoll = 0.0f;
 	private Pose pose = Pose.Unknown;
 	private ThalmicMyo thalmicMyo;
 
@@ -26,21 +24,37 @@ public class ScrInput : MonoBehaviour {
 	}
 
 	private void Update() {
-		int obsDest;
+		try {
+			pose = thalmicMyo.pose;
 
-		if (Input.GetKeyDown (KeyCode.W)) {
-//			destroy(0);
-			triggers.enable(0);
-		} else if (Input.GetKeyDown (KeyCode.S)) {
-//			destroy(1);
-			triggers.enable(1);
-		} else if (Input.GetKeyDown (KeyCode.A)) {
-//			destroy(2);
-			triggers.enable(2);
-		} else if (Input.GetKeyDown (KeyCode.D)) {
-//			destroy(3);
-			triggers.enable(3);
+			if (pose == Pose.WaveIn) {
+				triggers.enable (0);
+			} else if (pose == Pose.DoubleTap) {
+				triggers.enable (1);
+			} else if (pose == Pose.Fist) {
+				triggers.enable (2);
+			} else if (pose == Pose.FingersSpread) {
+				triggers.enable (3);
+			} 
+		} catch {
+			Debug.Log ("Myo not found");
 		}
+
+//		if (Input.GetKeyDown (KeyCode.W)) {
+////			destroy(0);
+//			triggers.enable(0);
+//		} else if (Input.GetKeyDown (KeyCode.S)) {
+////			destroy(1);
+//			triggers.enable(1);
+//		} else if (Input.GetKeyDown (KeyCode.A)) {
+////			destroy(2);
+//			triggers.enable(2);
+//		} else if (Input.GetKeyDown (KeyCode.D)) {
+////			destroy(3);
+//			triggers.enable(3);
+//		}
+
+
 	}
 
 	private void destroy(int index) {

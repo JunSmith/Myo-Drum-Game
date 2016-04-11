@@ -1,19 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEngine.SceneManagement;
+//using UnityEngine.SceneManagement;
 
 public class ScrMenu : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	
+	public void BtnPlay_click() {
+		//SceneManager.LoadScene (1);
+		Application.LoadLevel (1);
 	}
 
-	public void BtnPlay_click() {
-		SceneManager.LoadScene (1);
+	public void BtnMenu_click() {
+		//SceneManager.LoadScene(0);
+		Application.LoadLevel (0);
 	}
-    public void BtnMenu_click()
-    {
-        SceneManager.LoadScene(0);
-    }
 }
