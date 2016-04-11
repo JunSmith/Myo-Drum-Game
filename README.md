@@ -20,7 +20,12 @@ Throughout the development of the project, the type of project we were creating 
 
 
 ##System Architecture
+![Alt text](http://i.imgur.com/POjyIG3.jpg "System Architecture Diagram")
 
+Not shown is the leaderboard scripts, which connect to a simple list on an Azure server. The leaderboard can hold the player's name and score and will show from highest score to lowest. Unfortunately our Azure subscription expired. 
 
 ##Conclusion
 In conclusion, we have found that, though the armband allows for unhindered movement and is generally quite responsive, it becomes tiring quickly when gestures are based around the movement of the entire arm, or specific areas of the hand and wrist. In contrast traditional input methods allow for longer sessions of use, however, they restrict the user’s movement. 
+
+##References
+[Bitrave plugin for Azure Services](https://github.com/deadlyfingers/azure-mobile-services-for-unity3d)
