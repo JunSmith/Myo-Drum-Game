@@ -6,6 +6,5 @@ public class ScrArea : MonoBehaviour {
 
 	private void OnTriggerEnter2D(Collider2D other) {
 		Destroy (other.gameObject);
-		scrGameVars.SetScore (10);
 	}
 }

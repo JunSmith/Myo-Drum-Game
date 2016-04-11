@@ -2,18 +2,18 @@
 using System.Collections;
 
 public class ScrShowScore : MonoBehaviour {
-	private float score;
+	private int score;
 	public ScrGameVars playerScore;
 	public GUIStyle labelStyle;
 
-	void Update () {
+	private void Update () {
 		score = playerScore.getScore();
 	}
 
-	void OnGUI () {
-		labelStyle.fontSize = 45;
+	private void OnGUI () {
+		labelStyle.fontSize = 30;
 		labelStyle.fontStyle = FontStyle.Bold;
-		labelStyle.normal.textColor = Color.black;
+		labelStyle.normal.textColor = Color.white;
 
 		GUI.Label (new Rect (10, 90, 100, 30), "Score: " + (int)(score), labelStyle);
 	}

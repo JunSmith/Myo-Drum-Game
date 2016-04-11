@@ -35,7 +35,7 @@ public class ScrInput : MonoBehaviour {
 				triggers.enable (2);
 			} else if (pose == Pose.FingersSpread) {
 				triggers.enable (3);
-			} 
+			}
 		} catch {
 			Debug.Log ("Myo not found");
 		}
@@ -63,7 +63,7 @@ public class ScrInput : MonoBehaviour {
 	}
 }
 
-//pose = Pose.WaveIn; 
+//pose = Pose.WaveIn;
 //pose = Pose.DoubleTap;
 //pose = Pose.Fist;
 //pose = Pose.FingersSpread;

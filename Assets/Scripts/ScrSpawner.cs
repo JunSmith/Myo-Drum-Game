@@ -20,16 +20,16 @@ public class ScrSpawner : MonoBehaviour {
 	private IEnumerator Start ()
     {
         audio = GetComponent<AudioSource>();
-		obsQueue0 = new Queue<Object> ();
-		obsQueue1 = new Queue<Object> ();
-		obsQueue2 = new Queue<Object> ();
-		obsQueue3 = new Queue<Object> ();
-		yield return StartCoroutine("Spawn"); 
-	}
+				obsQueue0 = new Queue<Object> ();
+				obsQueue1 = new Queue<Object> ();
+				obsQueue2 = new Queue<Object> ();
+				obsQueue3 = new Queue<Object> ();
+				yield return StartCoroutine("Spawn"); 
+		}
 
 	IEnumerator Spawn() {
 		int row;
-        
+
         while (true)
         {
             counter++;
@@ -72,8 +72,8 @@ public class ScrSpawner : MonoBehaviour {
 				break;
 			}
 
- 
-  
+
+
 
             if (counter == 5 && spawnSpeed != 2)
             {
