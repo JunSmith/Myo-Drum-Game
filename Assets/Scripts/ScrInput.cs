@@ -12,18 +12,22 @@ public class ScrInput : MonoBehaviour {
 	public ScrTriggers triggers;
 
 	private Pose pose = Pose.Unknown;
-	private ThalmicMyo thalmicMyo;
+	//private ThalmicMyo thalmicMyo;
 
-	private void Start() {
-		try {
-			thalmicMyo = myo.GetComponent<ThalmicMyo> (); // This will fail if there is no Myo
-		}
-		catch {
-			Debug.Log ("No Myo found");
-		}
-	}
+//	private void Start() {
+//		try {
+//			thalmicMyo = myo.GetComponent<ThalmicMyo> (); // This will fail if there is no Myo
+//		}
+//		catch {
+//			Debug.Log ("No Myo found");
+//		}
+//	}
 
 	private void Update() {
+			//thalmicMyo = myo.GetComponent<ThalmicMyo> (); // This will fail if there is no Myo
+		
+		ThalmicMyo thalmicMyo = myo.GetComponent<ThalmicMyo> ();
+
 		try {
 			pose = thalmicMyo.pose;
 

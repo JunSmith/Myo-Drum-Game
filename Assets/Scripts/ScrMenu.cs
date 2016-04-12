@@ -8,8 +8,12 @@ public class ScrMenu : MonoBehaviour {
 		//SceneManager.LoadScene (1);
 		Application.LoadLevel (1);
 	}
-
-	public void BtnMenu_click() {
+    public void BtnHighScores_click()
+    {
+        //SceneManager.LoadScene (1);
+        Application.LoadLevel(3);
+    }
+    public void BtnMenu_click() {
 		//SceneManager.LoadScene(0);
 		Application.LoadLevel (0);
 	}
