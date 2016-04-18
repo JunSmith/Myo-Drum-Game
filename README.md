@@ -29,3 +29,5 @@ In conclusion, we have found that, though the armband allows for unhindered move
 
 ##References
 [Bitrave plugin for Azure Services](https://github.com/deadlyfingers/azure-mobile-services-for-unity3d)
+
+[Link to slide](https://docs.google.com/presentation/d/1xcvFqlLvUM4pOROVsdrCfs1kSZ5rLbBfEmob3oM-C1M/edit?usp=sharing)
